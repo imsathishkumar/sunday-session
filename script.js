@@ -4,12 +4,12 @@ data.then(function (res){
 })
 .then(function (res){
     //console.log(res);
-    
     createPage(res);
 })
 .catch(function (err){
     console.log("404 error");
 })
+
 var div= document.createElement('div');
 div.setAttribute("class","container newclass");
 
@@ -21,6 +21,7 @@ function createPage(data){
         createweb(element);
     });
 }
+
 function createweb(obj){
     let elemant = document.createElement('div');
     elemant.setAttribute('class','col-4 newclass');
@@ -70,6 +71,7 @@ function createweb(obj){
     div.append(row);
     document.body.append(div);
 }
+
 function myFunction(data){
     let climate=fetch("https://api.openweathermap.org/data/2.5/weather?q=" + data + "&appid=cc7670c9ef868e16633ab398d81a0e1f");
 
